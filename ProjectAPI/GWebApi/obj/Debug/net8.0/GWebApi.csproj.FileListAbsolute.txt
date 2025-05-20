@@ -1,0 +1,8 @@
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.csproj.AssemblyReference.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.AssemblyInfoInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.AssemblyInfo.cs
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.csproj.CoreCompileInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\GWebApi\GWebApi\obj\Debug\net8.0\GWebApi.sourcelink.json

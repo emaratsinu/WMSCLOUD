@@ -1,0 +1,28 @@
+/* Ensure the table and pagination are inside a flex container */
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .dataTables_paginate {
+    display: flex;
+    justify-content: flex-end;  /* Align pagination to the right */
+    margin-top: 1rem;
+  }
+  
+  .dataTables_paginate a {
+    margin: 0 5px;  /* Adjust margin between pagination buttons */
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto;  /* Prevents horizontal scrolling issues */
+  }
+  
+  .table-container .table {
+    width: 100%;
+    table-layout: fixed;  /* Prevents the table from expanding beyond its container */
+  }
+  

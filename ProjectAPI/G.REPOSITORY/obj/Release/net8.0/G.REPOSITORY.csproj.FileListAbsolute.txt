@@ -1,0 +1,16 @@
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\bin\Release\net8.0\G.REPOSITORY.deps.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\bin\Release\net8.0\G.REPOSITORY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\bin\Release\net8.0\G.REPOSITORY.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\bin\Release\net8.0\G.ENTITY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\bin\Release\net8.0\G.ENTITY.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.csproj.AssemblyReference.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.GeneratedMSBuildEditorConfig.editorconfig
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.AssemblyInfoInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.AssemblyInfo.cs
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.csproj.CoreCompileInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.sourcelink.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSI.BE48BCE9.Up2Date
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\refint\G.REPOSITORY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\G.REPOSITORY.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Release\net8.0\ref\G.REPOSITORY.dll

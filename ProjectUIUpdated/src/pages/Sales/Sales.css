@@ -1,0 +1,20 @@
+/* tableStyles.css */
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .table-bordered {
+    width: 100%;
+    table-layout: auto;
+    min-width: 1800px; /* Ensures a horizontal scrollbar appears */
+    white-space: nowrap; /* Prevents text from breaking */
+  }
+  
+  .table-light {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+  }
+  

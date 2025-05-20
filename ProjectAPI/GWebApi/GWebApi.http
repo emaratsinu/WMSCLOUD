@@ -1,0 +1,6 @@
+@GWebApi_HostAddress = http://localhost:5258
+
+GET {{GWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

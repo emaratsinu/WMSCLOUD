@@ -1,0 +1,12 @@
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\bin\Debug\net8.0\G.ENTITY.deps.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\bin\Debug\net8.0\G.ENTITY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\bin\Debug\net8.0\G.ENTITY.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.GeneratedMSBuildEditorConfig.editorconfig
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.AssemblyInfoInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.AssemblyInfo.cs
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.csproj.CoreCompileInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.sourcelink.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\refint\G.ENTITY.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\G.ENTITY.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.ENTITY\obj\Debug\net8.0\ref\G.ENTITY.dll

@@ -1,0 +1,6 @@
+@GWebApiProject_HostAddress = http://localhost:5231
+
+GET {{GWebApiProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

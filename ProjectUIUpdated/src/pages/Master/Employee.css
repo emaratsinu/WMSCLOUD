@@ -1,0 +1,10 @@
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .form-check-label {
+    font-size: 18px; /* Increase label size for better visibility */
+  }
+  

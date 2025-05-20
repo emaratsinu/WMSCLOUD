@@ -1,0 +1,74 @@
+.loginframe {
+    margin: 10% auto 0;
+}
+.login-logo {
+    width: 100px;
+    margin: 10px auto;
+}
+.login-logo img {
+    width: 100%;
+}
+.login-input {
+    float: left;
+    width: 100%;
+    margin:  0 0 10px;
+}
+.login-input label {
+    float: left;
+    width: 30px;
+    height: 40px;
+    top: 50%;
+    padding: 10px 0 0;
+    text-align: center;
+    background: #ccc;
+    margin: 0 5px 4px 0;
+}
+.login-input input[type='text'], .login-input input[type='password'] {
+    float: left;
+    width: calc(100% - 35px) !important;
+    height: 40px;
+    border: 0;
+    padding: 8px;
+    border-bottom: 1px solid #CCC;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.login-input input[type='submit'] {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    color: black;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #CCC;
+    border-bottom: 1px solid #CCC;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+body {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .card {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    border-radius: 12px;
+  }
+  
+  input {
+    border-radius: 8px;
+  }
+  
+  button {
+    background: linear-gradient(to right, #4a90e2, #357ae8);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    box-shadow: 0px 5px 15px rgba(58, 123, 213, 0.3);
+  }
+  

@@ -1,0 +1,2 @@
+﻿EMPLOYEE_Id,EMPLOYEE_Number,EMPLOYEE_Name_Ar,EMPLOYEE_Name_En,EMPLOYEE_Address,EMPLOYEE_DesignationId,EMPLOYEE_DateOfBirth,EMPLOYEE_DateOfJoin,EMPLOYEE_BasicSalary,EMPLOYEE_ContactNo,EMPLOYEE_Photo,EMPLOYEE_IqamaId,EMPLOYEE_Nationality,EMPLOYEE_PassportNo,EMPLOYEE_Active,EMPLOYEE_CodeMain
+209,200,"Mohamed Ansari","Mohamed Ansari","AL Wallan Pharmacies",8,"04-01-1987 00:00:00","04-01-2023 00:00:00",0.000,0,"",1,Indian,I200,True,""

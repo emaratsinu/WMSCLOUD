@@ -1,0 +1,91 @@
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\appsettings.json
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\firstapi.exe
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\firstapi.deps.json
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\firstapi.runtimeconfig.json
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\firstapi.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\firstapi.pdb
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.csproj.AssemblyReference.cache
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.AssemblyInfoInputs.cache
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.AssemblyInfo.cs
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.csproj.CoreCompileInputs.cache
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.firstapi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.build.firstapi.props
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.firstapi.props
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.firstapi.props
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\scopedcss\bundle\firstapi.styles.css
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.csproj.Up2Date
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.dll
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\refint\firstapi.dll
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.pdb
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\firstapi.genruntimeconfig.cache
+C:\Users\emara\source\repos\firstapi\firstapi\obj\Debug\net8.0\ref\firstapi.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\emara\source\repos\firstapi\firstapi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\firstapi.exe
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\firstapi.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\appsettings.Development.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\appsettings.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.csproj.AssemblyReference.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.AssemblyInfoInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.AssemblyInfo.cs
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.csproj.CoreCompileInputs.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.MvcApplicationPartsAssemblyInfo.cs
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.MvcApplicationPartsAssemblyInfo.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.sourcelink.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets.build.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets.development.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.firstapi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.build.firstapi.props
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.firstapi.props
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.firstapi.props
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\scopedcss\bundle\firstapi.styles.css
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.csproj.Up2Date
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\refint\firstapi.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\appsettings.Development.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\appsettings.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\firstapi.exe
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\firstapi.deps.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\firstapi.runtimeconfig.json
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\firstapi.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\firstapi.pdb
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\bin\Debug\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\firstapi.genruntimeconfig.cache
+C:\Working\Projects Repo\WMSCloud\ProjectAPI\firstapi\firstapi\obj\Debug\net8.0\ref\firstapi.dll

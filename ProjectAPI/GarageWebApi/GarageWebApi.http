@@ -1,0 +1,6 @@
+//@GarageWebApi_HostAddress = http://localhost:5289
+@GarageWebApi_HostAddress= http://213.199.62.80:93/swagger/index.html
+GET {{GarageWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
