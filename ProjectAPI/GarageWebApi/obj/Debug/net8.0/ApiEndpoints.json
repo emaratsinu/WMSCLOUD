@@ -1,0 +1,3097 @@
+[
+  {
+    "ContainingType": "GarageWebApi.Controllers.AuthController",
+    "Method": "Authenticate",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "G.ENTITY.LoginRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchController",
+    "Method": "GetAllBranches",
+    "RelativePath": "api/Branch",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GarageWebApi.Models.BranchModel, GarageWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchController",
+    "Method": "Save",
+    "RelativePath": "api/Branch/SaveBranch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GarageWebApi.Models.BranchModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "DeleteItemName",
+    "RelativePath": "api/DeleteItemName",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemName_Dlt",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DesignationController",
+    "Method": "GetDesignation_id",
+    "RelativePath": "api/Designation_id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Desig_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetAllEmployee",
+    "RelativePath": "api/Employee",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.Employee_Main, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "Save",
+    "RelativePath": "api/Employee/SaveEmployee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.Employee_Main",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCgenNumber",
+    "RelativePath": "api/FetchNextCGenNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "brId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "cardStatusCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetNextLabourCode",
+    "RelativePath": "api/FetchNextLabourCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetNextOldPartCode",
+    "RelativePath": "api/FetchNextOldPartCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetAllItem",
+    "RelativePath": "api/GetAllitem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.Item_Main, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetAllItemList",
+    "RelativePath": "api/GetAllItemList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchController",
+    "Method": "GetBranch",
+    "RelativePath": "api/GetBranch",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "branchID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchAreaController",
+    "Method": "GetCurrency",
+    "RelativePath": "api/GetBranchArea",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchAreaController",
+    "Method": "GetBranchArea_id",
+    "RelativePath": "api/GetBranchArea_Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Area_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchTypesController",
+    "Method": "GetBranchTypes",
+    "RelativePath": "api/GetBranchType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchTypesController",
+    "Method": "GetBranchArea_id",
+    "RelativePath": "api/GetBranchType_Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BrType_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchTypesController",
+    "Method": "GetBranchType",
+    "RelativePath": "api/GetBranchTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetBusiness",
+    "RelativePath": "api/GetBusiness",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetBusiness_id",
+    "RelativePath": "api/GetBusiness_Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Bus_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetBusinessAll",
+    "RelativePath": "api/GetBusinessAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCardCustomerDtl",
+    "RelativePath": "api/GetCardCustomerDtl",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "COwner_Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "COwner_Code",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COwner_NameEn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COwner_NameAr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COwner_OwnerNameEn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COwner_OwnerNameAr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "COwner_ContactNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Card_CarPlateEn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Card_CarPlateAr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Make_Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Make_NameEn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Make_NameAr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Model_Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Model_NameEn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Model_NameAr",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCardCustomersPaginated",
+    "RelativePath": "api/GetCardCustomerPagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCardDetailPaginated",
+    "RelativePath": "api/GetCardDetailPagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cr",
+        "Type": "System.Byte",
+        "IsRequired": false
+      },
+      {
+        "Name": "brId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "jOrderStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "jobOrderId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCardEMployeePaginated",
+    "RelativePath": "api/GetCardEmployeePagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetCarDetails",
+    "RelativePath": "api/GetCarDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.CarDetail, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetCardInv",
+    "RelativePath": "api/GetCardInvNo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetLabourDetails",
+    "RelativePath": "api/GetCardlabourDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "criteria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "lbDet_CardId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "lbDet_IsCancelled",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "lbDet_Id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "lbDet_MechId",
+        "Type": "System.Nullable\u00601[[System.Int16, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetLabourGrpJob",
+    "RelativePath": "api/GetCardlabourGrpJobs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LGrp_ParentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Criteria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetLabourGrpJob2",
+    "RelativePath": "api/GetCardlabourGrpJobs2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCardMechGrp",
+    "RelativePath": "api/GetCardMechGroups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BrId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Criteria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "MechGrpId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCarMake",
+    "RelativePath": "api/GetCarMake",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCarMakeById",
+    "RelativePath": "api/GetCarMakeById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Make_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCarModel",
+    "RelativePath": "api/GetCarModel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCarModelById",
+    "RelativePath": "api/GetCarModelById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Model_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployee_Country",
+    "RelativePath": "api/GetCountries",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.Country, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCountries_id",
+    "RelativePath": "api/GetCountry_id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Country_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCountries",
+    "RelativePath": "api/GetCountryList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCurrency",
+    "RelativePath": "api/GetCurrency",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetCurrency_id",
+    "RelativePath": "api/GetCurrency_id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Curr_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetCustomerlist",
+    "RelativePath": "api/GetCustomerList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCustParts",
+    "RelativePath": "api/GetCustParts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CPart_CardId",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "CPart_IsReturned",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "criteria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetDepartment",
+    "RelativePath": "api/GetDepartment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetDepartment_id",
+    "RelativePath": "api/GetDepartment_Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Dept_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DesignationController",
+    "Method": "GetDesignation",
+    "RelativePath": "api/GetDesignation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DesignationController",
+    "Method": "GetDesignationNextCode",
+    "RelativePath": "api/GetDesignationNextCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployee_Dept",
+    "RelativePath": "api/GetEmpDept",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.Employee_Department, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployee",
+    "RelativePath": "api/GetEmployeeById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Emp_id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetEmployee_Designations",
+    "RelativePath": "api/GetEmployeeDesignation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.Employee_Designation, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemDtls_id",
+    "RelativePath": "api/GetItemDtls_ById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Item_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemGroup",
+    "RelativePath": "api/GetItemGroup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.ItemGroup, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemGroup_id",
+    "RelativePath": "api/GetItemGroup_Byid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ItemG_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemGroup",
+    "RelativePath": "api/GetItemGroupfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemLocation",
+    "RelativePath": "api/GetItemLocation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemName_id",
+    "RelativePath": "api/GetItemName_id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ItemN_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetCarModel",
+    "RelativePath": "api/GetItemNames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemOEM",
+    "RelativePath": "api/GetItemOEM",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.ItemOEM, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemoem_id",
+    "RelativePath": "api/GetItemOem_id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ItemOEM",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemPartCode",
+    "RelativePath": "api/GetItemPartCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.PartCodes, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemPrefix",
+    "RelativePath": "api/GetItemPrefix",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.ItemPrefix, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemPrefix",
+    "RelativePath": "api/GetItemPrefix_Fil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemPartOrgn",
+    "RelativePath": "api/GetItemPrtOrgn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemTax",
+    "RelativePath": "api/GetItemTax",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[G.ENTITY.ItemTax, G.ENTITY, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetItemUnit",
+    "RelativePath": "api/GetItemUnitfil",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetJobOrdrNetAmt",
+    "RelativePath": "api/GetJobOrdrNetAmt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Card_Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Br_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetLabourStatusDetail",
+    "RelativePath": "api/GetLabourStatusDetail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Criteria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "LbStatDet_HeadId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetLabourStatusHead",
+    "RelativePath": "api/GetLabourStatusHead",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetMitchelTime",
+    "RelativePath": "api/GetMitchelTime",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carModelId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "lGrpId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchController",
+    "Method": "GetNextBranchNumber",
+    "RelativePath": "api/GetNextBranchNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetNextEmployeeCode",
+    "RelativePath": "api/GetNextEmployeeCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.EmployeeController",
+    "Method": "GetNextEmpMainCode",
+    "RelativePath": "api/GetNextEmployeeCodeMain",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemCode",
+    "RelativePath": "api/GetNextItemCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextGroupCode",
+    "RelativePath": "api/GetNextItemGroupCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemLocationDetRow",
+    "RelativePath": "api/GetNextItemLocationDetRowNo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemNameCode",
+    "RelativePath": "api/GetNextItemNameCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemOemCode",
+    "RelativePath": "api/GetNextItemOemCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextPartCode",
+    "RelativePath": "api/GetNextItemPartCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemPrfxCode",
+    "RelativePath": "api/GetNextItemPrfxCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemPrfxCode",
+    "RelativePath": "api/GetNextItemPrfxCode_Byid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemUnitCode",
+    "RelativePath": "api/GetNextItemUnitCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorGroupController",
+    "Method": "GetNextVendorGroupCode",
+    "RelativePath": "api/GetNextVendorGrpCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorController",
+    "Method": "GetNextVendorNumber",
+    "RelativePath": "api/GetNextVendorNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorType",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchAreaController",
+    "Method": "GetNextBranchAreacode",
+    "RelativePath": "api/GetNxtBranchAreaCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchTypesController",
+    "Method": "GetNextBranchAreacode",
+    "RelativePath": "api/GetNxtBranchTypeCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetNextBusinessCode",
+    "RelativePath": "api/GetNxtBusinessCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetNxtCardCode",
+    "RelativePath": "api/GetNxtCardCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetNxtCarMakeCode",
+    "RelativePath": "api/GetNxtCarMakeCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetNxtCarModelCode",
+    "RelativePath": "api/GetNxtCarModelCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetNxtCarPayCode",
+    "RelativePath": "api/GetNxtCarPayCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetNextCountrycode",
+    "RelativePath": "api/GetNxtCountryCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetNextCurrencycode",
+    "RelativePath": "api/GetNxtCurrencyCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "GetNextDepartmentCode",
+    "RelativePath": "api/GetNxtDepartmentCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemcarDetRowNo",
+    "RelativePath": "api/GetNxtItemCarDetRowno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemUnitRowNo",
+    "RelativePath": "api/GetNxtItemUnitRowno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemVendorRowNo",
+    "RelativePath": "api/GetNxtItemVendorRowno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetNextItemOrgnCode",
+    "RelativePath": "api/GetNxtItmPrtOrgnCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetNxtSaleCode",
+    "RelativePath": "api/GetNxtSaleCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetOldParts",
+    "RelativePath": "api/GetOldParts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Criteria",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "COld_CardId",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "COld_IsReturned",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "COld_Id",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetOutsideParts",
+    "RelativePath": "api/GetOutsideParts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Card_Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Br_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsReturned",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetPartOrigin_byId",
+    "RelativePath": "api/GetPartOrgnById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PartOrg_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetPayType",
+    "RelativePath": "api/GetPayType",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "GetPayTypeById",
+    "RelativePath": "api/GetPayTypeById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PayType_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetSalesInvoiceSrlDtls",
+    "RelativePath": "api/GetSalesinvoiceSrlDtls",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sa_No",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetSaleslist",
+    "RelativePath": "api/GetSalesList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetSalesVatdet",
+    "RelativePath": "api/GetSalesVatDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemcode",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetCardId",
+    "RelativePath": "api/GetSavedCardId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CardCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BranchId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetStoreParts",
+    "RelativePath": "api/GetStoreParts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SaJobcardid",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "SaBrId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "GetUnit_Byid",
+    "RelativePath": "api/GetUnitById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Unit_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorController",
+    "Method": "GetVendor",
+    "RelativePath": "api/GetVendor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorType",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorController",
+    "Method": "GetVendor",
+    "RelativePath": "api/GetVendor_byid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorController",
+    "Method": "GetVendorDet",
+    "RelativePath": "api/GetVendorDet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorGroupController",
+    "Method": "GetVendorGroup",
+    "RelativePath": "api/GetVendorGroup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorGroupController",
+    "Method": "GetVendorGroupById",
+    "RelativePath": "api/GetVendorGroupById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "VendorG_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorGroupController",
+    "Method": "GetVendorGroup",
+    "RelativePath": "api/GetVendorGroups",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorGroupController",
+    "Method": "GetVendorLocation",
+    "RelativePath": "api/GetVendorLocation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filterField",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterCondition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SaveTax",
+    "RelativePath": "api/Item/SaveItemTax",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemTaxinsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetJobOrdrStatus",
+    "RelativePath": "api/JobOrdrStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetJobOrdrStatusById",
+    "RelativePath": "api/JobOrdrStatusById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statusid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetJobOrdrType",
+    "RelativePath": "api/JobOrdrTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetNextCustCode",
+    "RelativePath": "api/NextCustCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "GetNextOldPrtCode",
+    "RelativePath": "api/NextOldPartCode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.UserMainController",
+    "Method": "RefreshToken",
+    "RelativePath": "api/RefreshToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "GarageWebApi.Models.UserMainModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "refreshToken",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "SaveSalesinvoice",
+    "RelativePath": "api/Sales/api/SaveSalesinvoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.SalesInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "CheckSrlsts",
+    "RelativePath": "api/Sales/Check_SrlStatuss",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "G.ENTITY.SerialCheckRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "GetChildsrls",
+    "RelativePath": "api/Sales/GetParentChildSerials",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "serialNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "resType",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "level",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchAreaController",
+    "Method": "SaveBranchArea",
+    "RelativePath": "api/SaveBranchArea",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.BranchArea",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.BranchTypesController",
+    "Method": "SaveBranchType",
+    "RelativePath": "api/SaveBranchType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.BranchType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "SaveBusiness",
+    "RelativePath": "api/SaveBusiness",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.Business",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "SaveCardmain",
+    "RelativePath": "api/SaveCardMain",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.JobOrder",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "SaveCarMake",
+    "RelativePath": "api/SaveCarmake",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.CarMake_ins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "SavecarModel",
+    "RelativePath": "api/SavecarModel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.CarModel_ins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "SaveCommissionAllLabour",
+    "RelativePath": "api/SaveCommissionAllLabour",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.InsertLabourCommission",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "SaveCountry",
+    "RelativePath": "api/SaveCountry",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.Country_List",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "SaveCurrency",
+    "RelativePath": "api/SaveCurrency",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.Currency",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "SaveCustparts",
+    "RelativePath": "api/SaveCustParts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.CustomerPartDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DepartmentController",
+    "Method": "SaveDepartment",
+    "RelativePath": "api/SaveDepartment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.Department",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.DesignationController",
+    "Method": "SaveDesignation",
+    "RelativePath": "api/SaveDesignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.Designation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "Save",
+    "RelativePath": "api/SaveItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SaveGroup",
+    "RelativePath": "api/SaveItemGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemGroupIns",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SaveItemLocation",
+    "RelativePath": "api/SaveItemLocation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemLocationInsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SavePart",
+    "RelativePath": "api/SaveItemName",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemNameIns",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SaveOem",
+    "RelativePath": "api/SaveItemOem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemOEMIns",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SavePartCode",
+    "RelativePath": "api/SaveItemPartCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.PartCodeins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SavePrefix",
+    "RelativePath": "api/SaveItemPrfx",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemPrefixInsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SavePrtOrigin",
+    "RelativePath": "api/SaveItemPrtOrgn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.PartOrigin_ins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SaveUnit",
+    "RelativePath": "api/SaveItemUnit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.ItemUnit_ins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "SaveLabourCommission",
+    "RelativePath": "api/SaveLabourCommission",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.LabourCommissionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "SaveLabourDetails",
+    "RelativePath": "api/SavelabourDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.LabourDetail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "SaveLogPendingSrls",
+    "RelativePath": "api/SaveLogPendingSrl",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.SerialLogRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.ItemController",
+    "Method": "SaveMainItem",
+    "RelativePath": "api/SaveMainItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ItemId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "request",
+        "Type": "G.ENTITY.ItemRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "SaveOldparts",
+    "RelativePath": "api/SaveOldParts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.CardOldPartModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CarController",
+    "Method": "SavePayType",
+    "RelativePath": "api/SavePayType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.PayType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.SalesController",
+    "Method": "SaveSuspectedSrls",
+    "RelativePath": "api/SaveSuspectedSrl",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.SuspectedSerialDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorController",
+    "Method": "Save",
+    "RelativePath": "api/SaveVendor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GarageWebApi.Models.VendorModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.VendorGroupController",
+    "Method": "SaveVendorGroup",
+    "RelativePath": "api/SaveVendorGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.VendorGroup",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.CardController",
+    "Method": "UpdateCardStatus",
+    "RelativePath": "api/UpdateCardStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "G.ENTITY.UpdateCardStatusRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "G.ENTITY.DB_STATUS",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.UploadController",
+    "Method": "UploadFile",
+    "RelativePath": "api/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "itemCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GarageWebApi.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GarageWebApi.WeatherForecast, GarageWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

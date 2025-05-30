@@ -14,3 +14,19 @@ C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REP
 C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\refint\G.REPOSITORY.dll
 C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.pdb
 C:\Working\Projects Repo\WMSCloud\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\ref\G.REPOSITORY.dll
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\bin\Debug\net8.0\G.REPOSITORY.deps.json
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\bin\Debug\net8.0\G.REPOSITORY.dll
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\bin\Debug\net8.0\G.REPOSITORY.pdb
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\bin\Debug\net8.0\G.ENTITY.dll
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\bin\Debug\net8.0\G.ENTITY.pdb
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.csproj.AssemblyReference.cache
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.GeneratedMSBuildEditorConfig.editorconfig
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.AssemblyInfoInputs.cache
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.AssemblyInfo.cs
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.csproj.CoreCompileInputs.cache
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.sourcelink.json
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSI.BE48BCE9.Up2Date
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.dll
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\refint\G.REPOSITORY.dll
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\G.REPOSITORY.pdb
+F:\Software\WORK\WMSCLOUD\ProjectAPI\G.REPOSITORY\obj\Debug\net8.0\ref\G.REPOSITORY.dll

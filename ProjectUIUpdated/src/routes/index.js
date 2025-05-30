@@ -27,6 +27,13 @@ import SalesToJobCard from "../pages/Sales/SalesToJobCard"
 import Vendor from "../pages/Master/Vendor"
 import PurchaseBranch from "../pages/Workshop/PurchaseBranch"
 
+
+//////
+import EmployeePage from "../pages/GMS/EmployeePage";
+import BusinessPage from "../pages/GMS/BusinessPage";
+
+
+
 const authProtectedRoutes = [
   { path: "/carMake", element: <CarMake /> }, // Use `element` instead of `component`
   { path: "/Currency", element: <Currency /> }, // Use `element` instead of `component`
@@ -54,6 +61,12 @@ const authProtectedRoutes = [
   { path: "/SalesToJobCard", element: <SalesToJobCard /> },
   { path: "/Vendor", element: <Vendor /> },
   { path: "/PurchaseBranch", element: <PurchaseBranch /> },
+
+
+  { path: "/GmsEmployee", element: <EmployeePage /> },
+  { path: "/GmsBusiness", element: <BusinessPage /> },
+
+
 ]
 
 const publicRoutes = [{ path: "/Login", element: <Login /> }]

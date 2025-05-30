@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "e2m7nUP5tLv8LJx2VA0POdG/Bf03+1arduh0Kj/9/YI=",
+  "Hash": "mkiIpjo0t/7T+1gFLX8x0pe8u8pfHFJpPRpzugkQ6Tw=",
   "Source": "GarageWebApi",
   "BasePath": "_content/GarageWebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

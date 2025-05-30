@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "../../assets/images/logo.png"; // Importing logo
+//import logo from "../../assets/images/logo.png"; // Importing logo
 
 import { UserLoginCheck } from "../../components/Api/LoginApiService";
 
@@ -23,14 +23,20 @@ const Login = () => {
       console.log("API Response:", response);
 
       // Check if login was successful
-      if (response && response.employeeCode) {
-       // alert("test");
-        localStorage.setItem("authUser",JSON.stringify(response.employeeCode));
-        navigate("/DashBoard");
+      // if (response && response.employeeCode) {
+      //  // alert("test");
+      //   localStorage.setItem("authUser",JSON.stringify(response.employeeCode));
+      //   navigate("/DashBoard");
 
-      //window.location.href = "/Currency"; // Full reload of the page
+      // //window.location.href = "/Currency"; // Full reload of the page
 
-      } else {
+      // }
+      if (response && response.accessToken) {
+  localStorage.setItem("authUser", JSON.stringify(response)); // Save access + refresh token
+  navigate("/DashBoard");
+}
+
+       else {
         setError("Invalid username or password");
       }
     } catch (error) {

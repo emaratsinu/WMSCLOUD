@@ -1,0 +1,7242 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "GarageWebApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Branch/SaveBranch": {
+      "post": {
+        "tags": [
+          "Branch"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Branch": {
+      "get": {
+        "tags": [
+          "Branch"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BranchModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNextBranchNumber": {
+      "get": {
+        "tags": [
+          "Branch"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetBranch": {
+      "get": {
+        "tags": [
+          "Branch"
+        ],
+        "parameters": [
+          {
+            "name": "branchID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetBranchArea": {
+      "get": {
+        "tags": [
+          "BranchArea"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtBranchAreaCode": {
+      "get": {
+        "tags": [
+          "BranchArea"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetBranchArea_Id": {
+      "get": {
+        "tags": [
+          "BranchArea"
+        ],
+        "parameters": [
+          {
+            "name": "Area_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveBranchArea": {
+      "post": {
+        "tags": [
+          "BranchArea"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchArea"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchArea"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchArea"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetBranchType": {
+      "get": {
+        "tags": [
+          "BranchTypes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetBranchTypes": {
+      "get": {
+        "tags": [
+          "BranchTypes"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtBranchTypeCode": {
+      "get": {
+        "tags": [
+          "BranchTypes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetBranchType_Id": {
+      "get": {
+        "tags": [
+          "BranchTypes"
+        ],
+        "parameters": [
+          {
+            "name": "BrType_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveBranchType": {
+      "post": {
+        "tags": [
+          "BranchTypes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchType"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchType"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BranchType"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCarMake": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCarMakeById": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "Make_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtCarMakeCode": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveCarmake": {
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarMake_ins"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarMake_ins"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarMake_ins"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCarModel": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCarModelById": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "Model_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtCarModelCode": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SavecarModel": {
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarModel_ins"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarModel_ins"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarModel_ins"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetPayType": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetPayTypeById": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "PayType_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SavePayType": {
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayType"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayType"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PayType"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNxtCarPayCode": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCurrency": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtCurrencyCode": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCurrency_id": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "Curr_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveCurrency": {
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Currency"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Currency"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Currency"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCountryList": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCountry_id": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "parameters": [
+          {
+            "name": "Country_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtCountryCode": {
+      "get": {
+        "tags": [
+          "Car"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveCountry": {
+      "post": {
+        "tags": [
+          "Car"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Country_List"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Country_List"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Country_List"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCardCustomerDtl": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "COwner_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "COwner_Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "COwner_NameEn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "COwner_NameAr",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "COwner_OwnerNameEn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "COwner_OwnerNameAr",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "COwner_ContactNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Card_CarPlateEn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Card_CarPlateAr",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Make_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Make_NameEn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Make_NameAr",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Model_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Model_NameEn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Model_NameAr",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardCustomerPagination": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/JobOrdrTypes": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtCardCode": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/JobOrdrStatus": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardEmployeePagination": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardMechGroups": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "BrId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Criteria",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "MechGrpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardDetailPagination": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "cr",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "brId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "jOrderStatus",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "jobOrderId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          },
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FetchNextCGenNumber": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "brId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "cardStatusCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FetchNextLabourCode": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FetchNextOldPartCode": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardlabourDetails": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "criteria",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lbDet_CardId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "lbDet_IsCancelled",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lbDet_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "lbDet_MechId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardlabourGrpJobs": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "LGrp_ParentId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Criteria",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardlabourGrpJobs2": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetMitchelTime": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "carModelId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "lGrpId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SavelabourDetails": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabourDetail"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabourDetail"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabourDetail"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetLabourStatusHead": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetLabourStatusDetail": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "Criteria",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "LbStatDet_HeadId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveCardMain": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JobOrder"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JobOrder"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/JobOrder"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SaveLabourCommission": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabourCommissionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabourCommissionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LabourCommissionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UpdateCardStatus": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCardStatusRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCardStatusRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCardStatusRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/JobOrdrStatusById": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "statusid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveCommissionAllLabour": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertLabourCommission"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertLabourCommission"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InsertLabourCommission"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetSavedCardId": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "CardCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "BranchId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetOldParts": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "Criteria",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "COld_CardId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "COld_IsReturned",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "COld_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetStoreParts": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "SaJobcardid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "SaBrId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetOutsideParts": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "Card_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Br_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsReturned",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCustParts": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "CPart_CardId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "CPart_IsReturned",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "criteria",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetJobOrdrNetAmt": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "parameters": [
+          {
+            "name": "Card_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Br_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveOldParts": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CardOldPartModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CardOldPartModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CardOldPartModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NextOldPartCode": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveCustParts": {
+      "post": {
+        "tags": [
+          "Card"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerPartDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerPartDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerPartDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/NextCustCode": {
+      "get": {
+        "tags": [
+          "Card"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetDepartment": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtDepartmentCode": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetDepartment_Id": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "parameters": [
+          {
+            "name": "Dept_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveDepartment": {
+      "post": {
+        "tags": [
+          "Department"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Department"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Department"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Department"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetBusiness": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetBusinessAll": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtBusinessCode": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveBusiness": {
+      "post": {
+        "tags": [
+          "Department"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Business"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Business"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Business"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetBusiness_Id": {
+      "get": {
+        "tags": [
+          "Department"
+        ],
+        "parameters": [
+          {
+            "name": "Bus_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetDesignation": {
+      "get": {
+        "tags": [
+          "Designation"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetDesignationNextCode": {
+      "get": {
+        "tags": [
+          "Designation"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Designation_id": {
+      "get": {
+        "tags": [
+          "Designation"
+        ],
+        "parameters": [
+          {
+            "name": "Desig_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveDesignation": {
+      "post": {
+        "tags": [
+          "Designation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Designation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Designation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Designation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Employee": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee_Main"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetEmployeeById": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "parameters": [
+          {
+            "name": "Emp_id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetEmployeeDesignation": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee_Designation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetEmpDept": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee_Department"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNextEmployeeCode": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextEmployeeCodeMain": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Employee/SaveEmployee": {
+      "post": {
+        "tags": [
+          "Employee"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee_Main"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee_Main"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employee_Main"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCountries": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Country"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAllitem": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Item_Main"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAllItemList": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemPrfxCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemPrefix": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemPrefix"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemOEM": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemOEM"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemTax": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemTax"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemGroup": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemGroup"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemNames": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemPartCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PartCodes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SaveItem": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Item/SaveItemTax": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemTaxinsert"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemTaxinsert"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemTaxinsert"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNextItemOemCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemOem": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemOEMIns"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemOEMIns"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemOEMIns"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SaveItemPartCode": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartCodeins"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartCodeins"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartCodeins"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNextItemNameCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemName": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemNameIns"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemNameIns"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemNameIns"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemGroupfil": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemGroupCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemPrfxCode_Byid": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemGroup": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupIns"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupIns"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemGroupIns"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemUnitfil": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemUnitCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemLocationDetRowNo": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextItemPartCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemUnit": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemUnit_ins"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemUnit_ins"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemUnit_ins"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetItemPrefix_Fil": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemPrfx": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemPrefixInsert"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemPrefixInsert"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemPrefixInsert"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNxtItmPrtOrgnCode": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtItemUnitRowno": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtItemVendorRowno": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNxtItemCarDetRowno": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemPrtOrgn": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemPrtOrgn": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartOrigin_ins"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartOrigin_ins"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartOrigin_ins"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetPartOrgnById": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "PartOrg_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemLocation": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveItemLocation": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemLocationInsert"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemLocationInsert"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemLocationInsert"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetUnitById": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "Unit_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemName_id": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "ItemN_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemOem_id": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "ItemOEM",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemGroup_Byid": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "ItemG_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetItemDtls_ById": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "Item_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/DeleteItemName": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemName_Dlt"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemName_Dlt"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemName_Dlt"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SaveMainItem": {
+      "post": {
+        "tags": [
+          "Item"
+        ],
+        "parameters": [
+          {
+            "name": "ItemId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemRequestModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCarDetails": {
+      "get": {
+        "tags": [
+          "Item"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarDetail"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Sales/Check_SrlStatuss": {
+      "post": {
+        "tags": [
+          "Sales"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SerialCheckRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SerialCheckRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SerialCheckRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sales/GetParentChildSerials": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "parameters": [
+          {
+            "name": "serialNo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "level",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveLogPendingSrl": {
+      "post": {
+        "tags": [
+          "Sales"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SerialLogRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SerialLogRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SerialLogRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetNxtSaleCode": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetSalesList": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCustomerList": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveSuspectedSrl": {
+      "post": {
+        "tags": [
+          "Sales"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SuspectedSerialDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SuspectedSerialDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SuspectedSerialDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetSalesVatDetails": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "parameters": [
+          {
+            "name": "itemcode",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Sales/api/SaveSalesinvoice": {
+      "post": {
+        "tags": [
+          "Sales"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesInvoiceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesInvoiceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesInvoiceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetSalesinvoiceSrlDtls": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "parameters": [
+          {
+            "name": "Sa_No",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetCardInvNo": {
+      "get": {
+        "tags": [
+          "Sales"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/upload": {
+      "post": {
+        "tags": [
+          "Upload"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ContentType": {
+                    "type": "string"
+                  },
+                  "ContentDisposition": {
+                    "type": "string"
+                  },
+                  "Headers": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Length": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Name": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "itemCode": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "ContentType": {
+                  "style": "form"
+                },
+                "ContentDisposition": {
+                  "style": "form"
+                },
+                "Headers": {
+                  "style": "form"
+                },
+                "Length": {
+                  "style": "form"
+                },
+                "Name": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "itemCode": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/RefreshToken": {
+      "post": {
+        "tags": [
+          "UserMain"
+        ],
+        "parameters": [
+          {
+            "name": "refreshToken",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserMainModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserMainModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserMainModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetVendor": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "name": "vendorType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetVendorDet": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextVendorNumber": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "name": "vendorType",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveVendor": {
+      "post": {
+        "tags": [
+          "Vendor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetVendor_byid": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "name": "vendorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetVendorGroup": {
+      "get": {
+        "tags": [
+          "VendorGroup"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetVendorGroups": {
+      "get": {
+        "tags": [
+          "VendorGroup"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetNextVendorGrpCode": {
+      "get": {
+        "tags": [
+          "VendorGroup"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SaveVendorGroup": {
+      "post": {
+        "tags": [
+          "VendorGroup"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorGroup"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorGroup"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorGroup"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DB_STATUS"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetVendorGroupById": {
+      "get": {
+        "tags": [
+          "VendorGroup"
+        ],
+        "parameters": [
+          {
+            "name": "VendorG_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetVendorLocation": {
+      "get": {
+        "tags": [
+          "VendorGroup"
+        ],
+        "parameters": [
+          {
+            "name": "filterField",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterCondition",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterValue",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BranchArea": {
+        "type": "object",
+        "properties": {
+          "area_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "area_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "area_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "area_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BranchModel": {
+        "type": "object",
+        "properties": {
+          "br_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "br_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "br_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "br_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "br_Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "br_IsActive": {
+            "type": "boolean"
+          },
+          "br_IsCurrBranch": {
+            "type": "boolean"
+          },
+          "br_AllowWhSales": {
+            "type": "boolean"
+          },
+          "br_AllowBulkSales": {
+            "type": "boolean"
+          },
+          "br_AllowCr": {
+            "type": "boolean"
+          },
+          "br_AllowCCr": {
+            "type": "boolean"
+          },
+          "br_AllowPurchase": {
+            "type": "boolean"
+          },
+          "br_AllowPurchaseRet": {
+            "type": "boolean"
+          },
+          "br_AllowTrOut": {
+            "type": "boolean"
+          },
+          "br_AllowTrIn": {
+            "type": "boolean"
+          },
+          "br_AllowSales": {
+            "type": "boolean"
+          },
+          "br_TransferBasedOnShEx": {
+            "type": "boolean"
+          },
+          "br_NeedShExReport": {
+            "type": "boolean"
+          },
+          "br_TypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "br_AreaId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "br_ClosedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "br_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "br_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "oldCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BranchType": {
+        "type": "object",
+        "properties": {
+          "brType_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "brType_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "brType_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "brType_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Business": {
+        "type": "object",
+        "properties": {
+          "bus_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bus_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "bus_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "bus_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarDetail": {
+        "type": "object",
+        "properties": {
+          "model_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "model_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "model_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "model_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "model_MakeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "make_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "make_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "model_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "model_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "model_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarMake_ins": {
+        "type": "object",
+        "properties": {
+          "makeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "makeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeNameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeNameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeCreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarModel_ins": {
+        "type": "object",
+        "properties": {
+          "modelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modelCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelNameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelNameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelMakeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modelCreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CardOldPartModel": {
+        "type": "object",
+        "properties": {
+          "cOld_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cOld_Code": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cOld_Type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cOld_CardId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cOld_PartNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "cOld_PartNameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "cOld_PartNameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "cOld_Qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "cOld_Rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "cOld_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cOld_IsReturned": {
+            "type": "boolean"
+          },
+          "cOld_ReturnDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "cOld_UserId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cOld_BranchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cOld_OEM": {
+            "type": "string",
+            "nullable": true
+          },
+          "cOld_VatPer": {
+            "type": "number",
+            "format": "double"
+          },
+          "cOld_VatAmt": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Country": {
+        "type": "object",
+        "properties": {
+          "country_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "country_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Country_List": {
+        "type": "object",
+        "properties": {
+          "country_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "country_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "country_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Currency": {
+        "type": "object",
+        "properties": {
+          "curr_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "curr_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "curr_ShortCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "curr_Desc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerPartDto": {
+        "type": "object",
+        "properties": {
+          "cPart_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cPart_Code": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cPart_Type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cPart_CardId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cPart_PartNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "cPart_PartNameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "cPart_PartNameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "cPart_Qty": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cPart_Rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "cPart_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cPart_IsReturned": {
+            "type": "boolean"
+          },
+          "cPart_ReturnDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "cPart_UserId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cPart_BranchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cPart_OEM": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DB_STATUS": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "statusMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "redirectUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "location_Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DateOnly": {
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "month": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dayOfWeek": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          },
+          "dayOfYear": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "dayNumber": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DayOfWeek": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Department": {
+        "type": "object",
+        "properties": {
+          "dept_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dept_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "dept_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "dept_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "dept_BusId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Designation": {
+        "type": "object",
+        "properties": {
+          "desig_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "desig_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "desig_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "desig_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Employee_Department": {
+        "type": "object",
+        "properties": {
+          "dept_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dept_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "dept_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "dept_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "dept_BusId": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Employee_Designation": {
+        "type": "object",
+        "properties": {
+          "desig_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "desig_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "desig_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "desig_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Employee_Main": {
+        "type": "object",
+        "properties": {
+          "emp_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "emp_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_MainCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_Initials": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_DesigId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "emp_DeptId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "emp_Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_Mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_Doj": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "emp_Dob": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "emp_BasicSal": {
+            "type": "number",
+            "format": "double"
+          },
+          "emp_PhotoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_IsActive": {
+            "type": "boolean"
+          },
+          "emp_IsOnVacation": {
+            "type": "boolean"
+          },
+          "emp_IqamaNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_IqamaIssueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emp_IqamaExpDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emp_IqamaPlace": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_PassportNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_CountryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "emp_IsActiveUser": {
+            "type": "boolean"
+          },
+          "emp_LoginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_Pwd": {
+            "type": "string",
+            "nullable": true
+          },
+          "emp_IsLoggedIn": {
+            "type": "boolean"
+          },
+          "emp_CreatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "emp_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emp_UpdatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "emp_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emp_BrId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "emp_IsAllowRetailOnly": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InsertLabourCommission": {
+        "type": "object",
+        "properties": {
+          "lbDet_CardId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lbDet_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lbdet_BranchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wlComm_JobType": {
+            "type": "string",
+            "nullable": true
+          },
+          "wlComm_IsOk": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemCarDetModel": {
+        "type": "object",
+        "properties": {
+          "itemCar_RowNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCar_ItemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCar_ModelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCar_YearFrom": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCar_YearTo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCar_IsActive": {
+            "type": "boolean"
+          },
+          "itemCar_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCar_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "itemCar_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemDto": {
+        "type": "object",
+        "properties": {
+          "item_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_OemId1": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId2": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId3": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId4": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId5": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId6": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_PrefixId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_PrefixCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_NameId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_DescEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_DescAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_AgentPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_EcoOrderQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_MfrId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_GroupId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_CountryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_MfrPartNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_PartCodeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_IsActive": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "item_NeedExpDate": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "item_PhotoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_MinPackingQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_MaxPackingQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_Barcode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_Barcode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_Notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_CreatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_UpdatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_Quality": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_TimeFix": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_isOriginal": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemGroup": {
+        "type": "object",
+        "properties": {
+          "itemG_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemG_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemG_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemG_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemG_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemG_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemGroupIns": {
+        "type": "object",
+        "properties": {
+          "itemG_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemG_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemG_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemG_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemG_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemLocDetModel": {
+        "type": "object",
+        "properties": {
+          "locDet_RowNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locDet_ItemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locDet_LocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locDet_BrId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locDet_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locDet_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemLocationInsert": {
+        "type": "object",
+        "properties": {
+          "itemLoc_Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemModel": {
+        "type": "object",
+        "properties": {
+          "item_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_OemId1": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId2": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId3": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId4": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId5": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_OemId6": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_PrefixId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_PrefixCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_NameId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_DescEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_DescAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_AgentPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_EcoOrderQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_MfrId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_GroupId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_CountryId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_MfrPartNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_PartCodeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_IsActive": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "item_NeedExpDate": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "item_PhotoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_MinPackingQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_MaxPackingQty": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "item_Barcode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_Barcode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_Notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_CreatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "item_UpdatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "item_Quality": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_TimeFix": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_isOriginal": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemNameIns": {
+        "type": "object",
+        "properties": {
+          "itemN_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemN_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemN_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemN_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemN_CreatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemName_Dlt": {
+        "type": "object",
+        "properties": {
+          "itemN_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemOEM": {
+        "type": "object",
+        "properties": {
+          "oeM_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oeM_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "oeM_Number": {
+            "type": "string",
+            "nullable": true
+          },
+          "oeM_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oeM_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "oeM_UpdatedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemOEMIns": {
+        "type": "object",
+        "properties": {
+          "oeM_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oeM_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "oeM_Number": {
+            "type": "string",
+            "nullable": true
+          },
+          "oeM_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemPrefix": {
+        "type": "object",
+        "properties": {
+          "prefix_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prefix_Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemPrefixInsert": {
+        "type": "object",
+        "properties": {
+          "prefix_Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemRequestModel": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/ItemModel"
+          },
+          "unitDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemUnitDetModel"
+            },
+            "nullable": true
+          },
+          "vendorDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemVendorsModel"
+            },
+            "nullable": true
+          },
+          "carDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemCarDetModel"
+            },
+            "nullable": true
+          },
+          "locationDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemLocDetModel"
+            },
+            "nullable": true
+          },
+          "vatDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemVatDetailsDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemTax": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "nameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxPerc": {
+            "type": "number",
+            "format": "double"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemTaxinsert": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "itemCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxMastCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "taxPerc": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemUnitDetModel": {
+        "type": "object",
+        "properties": {
+          "unitDet_RowNo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unitDet_ItemId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unitDet_UnitId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitDet_ParentRowNo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unitDet_Factor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitDet_IsActive": {
+            "type": "boolean"
+          },
+          "unitDet_FinalFactor": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitDet_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemUnit_ins": {
+        "type": "object",
+        "properties": {
+          "unit_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unit_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemVatDetailsDto": {
+        "type": "object",
+        "properties": {
+          "itemCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxMastCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "taxPerc": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemVendorsModel": {
+        "type": "object",
+        "properties": {
+          "itemVendor_RowNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemVendor_ItemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemVendor_VendorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemVendor_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemVendor_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Item_Main": {
+        "type": "object",
+        "properties": {
+          "item_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_OemId1": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "item_OemId2": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "item_OemId3": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "item_OemId4": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "item_OemId5": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "item_OemId6": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "item_PrefixId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_PrefixCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_NameId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "itemN_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemN_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_DescEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_DescAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_AgentPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "item_EcoOrderQty": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_MfrId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "vendor_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_GroupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemG_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_CountryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_MfrPartNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_PartCodeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_IsActive": {
+            "type": "boolean"
+          },
+          "item_NeedExpDate": {
+            "type": "boolean"
+          },
+          "item_PhotoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_MinPackingQty": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_MaxPackingQty": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "item_Barcode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_Barcode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_Notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "item_UpdatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item_UpdatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "item_Quality": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_TimeFix": {
+            "type": "string",
+            "nullable": true
+          },
+          "item_isOriginal": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "JobOrder": {
+        "type": "object",
+        "properties": {
+          "card_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card_Code": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card_CGenId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card_CrdTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_OpenDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "card_CloseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "card_RecpId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_COwnerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card_MakeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_ModelId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card_CarYear": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_CarPlateAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_CarPlateEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_VinCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_Kilometer": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_Engine": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_Gear": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_deposit": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_description": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_StatId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_UserId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_BranchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_DemurrageAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_LabourDiscAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_LabourVatAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_LabourNet": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_OldPartNet": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_CustPartNet": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_StorePartNet": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_OutSidePartNet": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_DosNet": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_PaymentMode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_SpanAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_CashAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_AuthentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_SpanNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_NewModelName": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_NewMakeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_QtNo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "card_SpanType": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_SpanCommPerc": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_SpanCommAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "card_SpanName": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_PayType": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_WarrantyPeriod": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_InsuranceType": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_InsuranceExpDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_PrintCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "card_CarColour": {
+            "type": "string",
+            "nullable": true
+          },
+          "card_CustRefNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabourCommissionRequest": {
+        "type": "object",
+        "properties": {
+          "jobOrderId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "commissionPerc": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LabourDetail": {
+        "type": "object",
+        "properties": {
+          "lbDet_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lbDet_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "lbDet_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lbDet_CardId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lbDet_LGrpId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_MechGrpId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_MechId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_Qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_VATPerc": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_VATAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_Rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_LabStatId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_LabStatDetId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_EndDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lbDet_WDays": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_WHrs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_WMins": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_WSecs": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_Comm": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_MitchelTime": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_SkillLevel": {
+            "type": "string",
+            "nullable": true
+          },
+          "lbDet_NormalTime": {
+            "type": "number",
+            "format": "double"
+          },
+          "lbDet_UserId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_BranchId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lbDet_IsActive": {
+            "type": "boolean"
+          },
+          "lbDet_IsCancelled": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequestModel": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PartCodeins": {
+        "type": "object",
+        "properties": {
+          "partC_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partC_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "partC_Partcode": {
+            "type": "string",
+            "nullable": true
+          },
+          "partC_Type": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PartCodes": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "partCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PartOrigin_ins": {
+        "type": "object",
+        "properties": {
+          "partOrg_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partOrg_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "partOrg_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "partOrg_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "partOrg_Type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partOrg_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "partOrg_CreatedOn": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PayType": {
+        "type": "object",
+        "properties": {
+          "payType_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "payType_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "payType_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "payType_NameAr": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesDetailModel": {
+        "type": "object",
+        "properties": {
+          "saDet_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "saDet_RowNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "saDet_MainId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "saDet_UnitDetID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "saDet_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "saDet_Qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "saDet_Price": {
+            "type": "number",
+            "format": "double"
+          },
+          "saDet_ActualPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "saDet_DiscPerc": {
+            "type": "number",
+            "format": "double"
+          },
+          "saDet_TotCost": {
+            "type": "number",
+            "format": "double"
+          },
+          "saDet_VATPerc": {
+            "type": "number",
+            "format": "double"
+          },
+          "saDet_ItemTaxCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesInvoiceDto": {
+        "type": "object",
+        "properties": {
+          "sa_Id": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "sa_No": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sa_DueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sa_CustID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sa_InvType": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_SalesType": {
+            "type": "string"
+          },
+          "sa_PaytypeID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sa_CardNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_CardAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "sa_CardType": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_AuthCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_TotQty": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sa_TotAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "sa_DiscAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "sa_VATAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "sa_TotCost": {
+            "type": "number",
+            "format": "double"
+          },
+          "sa_OrderID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "sa_PickingID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "sa_SalesmanID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "sa_DeliveryNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_Notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "sa_PayDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sa_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sa_JobCardId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "sa_BrId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sa_RetAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "sa_DepositAmt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "updateMainOnly": {
+            "type": "boolean"
+          },
+          "salesDetail": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SalesDetailModel"
+            },
+            "nullable": true
+          },
+          "serialDetail": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SerialDetailModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SerialCheckRequest": {
+        "type": "object",
+        "properties": {
+          "serialNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "flagToCheck": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paytypeID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "custID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "jobCardID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "invID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "salesType": {
+            "type": "string",
+            "nullable": true
+          },
+          "toBrID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "vndrID": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "salesMechID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "salesMechGrpID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SerialDetailModel": {
+        "type": "object",
+        "properties": {
+          "trans_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trans_TableId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trans_Flag": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trans_PriceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trans_SerialId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trans_UnitDetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "trans_SrlNo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SerialLogRequest": {
+        "type": "object",
+        "properties": {
+          "serialNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "tableFlag": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "formUID": {
+            "type": "string",
+            "nullable": true
+          },
+          "sysName": {
+            "type": "string",
+            "nullable": true
+          },
+          "readBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SuspectedSerialDto": {
+        "type": "object",
+        "properties": {
+          "susp_ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "susp_SerialNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "susp_TxnDet": {
+            "type": "string",
+            "nullable": true
+          },
+          "susp_InvNo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "susp_ErrMsg": {
+            "type": "string",
+            "nullable": true
+          },
+          "susp_SysName": {
+            "type": "string",
+            "nullable": true
+          },
+          "susp_BrID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "susp_EnteredBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCardStatusRequest": {
+        "type": "object",
+        "properties": {
+          "cGen_Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cStatus_Code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserMainModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "statusMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "redirectUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "uId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name_Ar": {
+            "type": "string",
+            "nullable": true
+          },
+          "name_En": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isLoggedIn": {
+            "type": "boolean"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userBranchId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentBranchId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "brancH_Name_En": {
+            "type": "string",
+            "nullable": true
+          },
+          "brancH_Name_Ar": {
+            "type": "string",
+            "nullable": true
+          },
+          "languageId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "oldId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "lastUpdatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "expiresInhrs": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VendorGroup": {
+        "type": "object",
+        "properties": {
+          "vendorG_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendorG_Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendorG_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendorG_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendorG_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VendorModel": {
+        "type": "object",
+        "properties": {
+          "vendor_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_Type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_NameEn": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_NameAr": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_Category": {
+            "type": "string"
+          },
+          "vendor_RegDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "vendor_Address": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_Web": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_IsActive": {
+            "type": "boolean"
+          },
+          "vendor_LocId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_GroupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_PartOriginId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_CreatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_UpdatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendor_Notes": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "$ref": "#/components/schemas/DateOnly"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

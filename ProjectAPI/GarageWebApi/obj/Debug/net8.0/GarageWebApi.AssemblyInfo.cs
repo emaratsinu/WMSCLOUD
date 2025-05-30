@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GarageWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a57817b8d074dc8b4aff2089978f54e1b01e2170")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5aaca636f43692cfb990a2d85dcb0e9d301169c")]
 [assembly: System.Reflection.AssemblyProductAttribute("GarageWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GarageWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
